@@ -27,14 +27,15 @@ public class RutaController {
         model.addAttribute("rutas", rutas);
         return "rutas";
     }
-    // RUTA POR ID
+    // RUTA POR ID (web)
     @GetMapping("/ruta_id/{id}")
-    public Ruta findById(@PathVariable String id) {
+    public String findById(@PathVariable String id, Model model) {
         Ruta ruta = rutaRepository.findById(id).orElse(null);
         if (ruta != null) {
-            return ruta;
-            } else {
-            throw new RutaNotFoundException("No hay ninguna ruta con el id: "+id);
+            model.addAttribute("ruta", ruta);
+            return "detalle_ruta"; // Nombre del nuevo archivo HTML
+        } else {
+            throw new RutaNotFoundException("No hay ninguna ruta con el id: " + id);
         }
     }
 

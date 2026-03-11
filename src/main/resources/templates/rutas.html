@@ -19,41 +19,60 @@
             <th>MÁS INFORMACIÓN</th>
         </tr>
         </thead>
-        <tbody th:each="ruta : ${rutas}">
-        <tr>
-            <td th:text="${ruta.properties.nombre}">nombre</td>
-            <td th:text="${ruta.properties.ubicacion}">ubicacion</td>
-            <td th:text="${ruta.properties.direccion}">direccion</td>
+        <tbody>
+        <tr th:each="ruta : ${rutas}"
+            th:if="${ruta != null}"
+            th:data-id="${ruta.id}"
+            onclick="navegarADetalle(this)"
+            style="cursor: pointer;">
+
+            <td th:text="${ruta.properties?.nombre}">Nombre</td>
+
             <td>
-                <a th:if="${ruta.properties.web != null and !ruta.properties.web.empty}"
+                    <span th:if="${ruta.properties?.ubicacion != null and !ruta.properties.ubicacion.empty}"
+                          th:text="${ruta.properties.ubicacion}">Ubicación</span>
+                <span th:unless="${ruta.properties?.ubicacion != null and !ruta.properties.ubicacion.empty}"
+                      class="text-disabled">No disponible</span>
+            </td>
+
+            <td th:text="${ruta.properties?.direccion}">Dirección</td>
+
+            <td>
+                <a th:if="${ruta.properties?.web != null and !ruta.properties.web.empty}"
                    th:href="${ruta.properties.web}"
                    target="_blank"
-                   class="btn-link">
-                    <i class="icon">🌐</i> Visitar Web
-                </a>
-
-                <span th:unless="${ruta.properties.web != null and !ruta.properties.web.empty}"
-                      class="text-disabled">
-        Web no disponible
-    </span>
+                   onclick="event.stopPropagation();"
+                   class="btn-link">🌐 Visitar Web</a>
+                <span th:unless="${ruta.properties?.web != null and !ruta.properties.web.empty}"
+                      class="text-disabled">Web no disponible</span>
             </td>
 
             <td>
-                <a th:if="${ruta.properties.masInformacion != null and !ruta.properties.masInformacion.empty}"
+                <a th:if="${ruta.properties?.masInformacion != null and !ruta.properties.masInformacion.empty}"
                    th:href="${ruta.properties.masInformacion}"
                    target="_blank"
-                   class="btn-link">
-                    <i class="icon">🔍</i> Ver Detalles
-                </a>
-
-                <span th:unless="${ruta.properties.masInformacion != null and !ruta.properties.masInformacion.empty}"
-                      class="text-disabled">
-        Sin info adicional
-    </span>
+                   onclick="event.stopPropagation();"
+                   class="btn-link">🔍 Ver Detalles</a>
+                <span th:unless="${ruta.properties?.masInformacion != null and !ruta.properties.masInformacion.empty}"
+                      class="text-disabled">Sin info adicional</span>
             </td>
         </tr>
         </tbody>
     </table>
 </main>
+
+<script>
+    // Esta función debe estar fuera de cualquier tabla o div para que sea global
+    function navegarADetalle(elemento) {
+        const id = elemento.getAttribute('data-id');
+        console.log("Navegando a la ruta con ID:", id); // Para depurar
+        if (id) {
+            window.location.href = '/ruta_id/' + id;
+        } else {
+            console.error("No se encontró el atributo data-id en la fila.");
+        }
+    }
+</script>
+
 </body>
 </html>

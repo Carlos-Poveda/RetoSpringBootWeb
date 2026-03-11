@@ -10,8 +10,6 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import java.util.List;
 
 @Data
-@Getter
-@Setter
 @Document(collection = "rutas")
 public class Ruta {
 

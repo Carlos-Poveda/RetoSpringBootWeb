@@ -168,3 +168,29 @@ h1 {
     align-items: center;
     padding-left: 8px;
 }
+
+#map {
+    height: 450px; /* ¡ESTO ES VITAL! Sin altura fija, el mapa es invisible */
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+.btn-web {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-web:hover {
+    background-color: #34495e;
+}
+
+.text-muted {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}

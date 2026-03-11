@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${ruta.properties.nombre}">Detalle de la Ruta</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.11.0/proj4.js"></script>
+  <style>
+    .detalle-container { max-width: 1000px; margin: 2rem auto; padding: 2rem; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    #map { height: 400px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.1); }
+    .back-btn { display: inline-block; margin-bottom: 1rem; color: #8ab4f8; text-decoration: none; }
+    .info-card { background: rgba(30, 30, 30, 0.7); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: 12px; }
+    .info-card h2 { color: #8ab4f8; margin-bottom: 1rem; }
+    .info-card p { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+<div class="detalle-container">
+  <a href="/rutas" class="back-btn">← Volver al listado</a>
+  <h1 th:text="${ruta.properties.nombre}">NOMBRE DE LA RUTA</h1>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h2>Información General</h2>
+      <p><strong>Ubicación:</strong> <span th:text="${ruta.properties.ubicacion ?: 'No disponible'}"></span></p>
+      <p><strong>Dirección:</strong> <span th:text="${ruta.properties.direccion}"></span></p>
+      <p><strong>Horario:</strong> <span th:text="${ruta.properties.horario ?: 'No disponible'}"></span></p>
+      <p><strong>Teléfono:</strong> <span th:text="${ruta.properties.telefono ?: 'No disponible'}"></span></p>
+      <div class="info-seccion">
+        <h3>Enlaces de Interés</h3>
+
+        <div th:if="${ruta.properties.web != null and !ruta.properties.web.empty}">
+          <p><strong>Página Web Oficial:</strong></p>
+          <a th:href="${ruta.properties.web}"
+             target="_blank"
+             class="btn-web">
+            🌐 Visitar Sitio Oficial
+          </a>
+        </div>
+
+        <div th:unless="${ruta.properties.web != null and !ruta.properties.web.empty}">
+          <p class="text-muted"><em>Web oficial no disponible para este emplazamiento.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="map"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.11.0/proj4.js"></script>
+
+<script th:inline="javascript">
+  // Esperamos a que el DOM esté listo para evitar errores de contenedor no encontrado
+  document.addEventListener('DOMContentLoaded', function() {
+    const utm30n = "+proj=utm +zone=30 +ellps=GRS80 +units=m +no_defs";
+    const wgs84 = "EPSG:4326";
+
+    var coordsUtm = [[${ruta.geometry.coordinates}]];
+
+    if (coordsUtm && coordsUtm.length >= 2) {
+      // Conversión de metros a grados
+      var conversion = proj4(utm30n, wgs84, [coordsUtm[0], coordsUtm[1]]);
+      var lat = conversion[1];
+      var lon = conversion[0];
+
+      var map = L.map('map').setView([lat, lon], 16);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+      }).addTo(map);
+
+      L.marker([lat, lon]).addTo(map)
+              .bindPopup([[${ruta.properties.nombre}]])
+              .openPopup();
+
+      // Forzamos a Leaflet a recalcular el tamaño por si acaso
+      setTimeout(function(){ map.invalidateSize(); }, 200);
+
+    } else {
+      console.error("No se han encontrado coordenadas para esta ruta.");
+      document.getElementById('map').innerHTML = "<p style='padding:20px;'>Coordenadas no disponibles para esta ruta.</p>";
+    }
+  });
+</script>
+</body>
+</html>
