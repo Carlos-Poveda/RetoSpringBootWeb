@@ -1,0 +1,247 @@
+[
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68b3",
+    "geometry": { "type": "Point", "coordinates": [373428.66, 4064829.51] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 1, "punto": "1", "x": "373428.66", "y": "4064829.51", "nombre": "PUERTA DE LA ALCAZABA", "ubicacion": "PUNTO DE INFORMACIÓN TURÍSTICA", "direccion": "C/ ALCAZABILLA, 1", "horario": "LUNES-VIERNES: 10:00-14:00, DOMINGO: 10:00-14:00", "telefono": "951926020", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-1" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68b2",
+    "geometry": { "type": "Point", "coordinates": [373449.42, 4065003.94] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 2, "punto": "2", "x": "373449.42", "y": "4065003.94", "nombre": "TRAZA DE LA MURALLA DE LA ALCAZABA A PUERTA DE GRANADA", "ubicacion": "", "direccion": "C/ ALCAZABILLA, 11-13", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-2" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68b1",
+    "geometry": { "type": "Point", "coordinates": [373450.2, 4065032.95] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 3, "punto": "3", "x": "373450.20", "y": "4065032.95", "nombre": "TORRE DE LA MURALLA MEDIEVAL", "ubicacion": "LOCAL PRIVADO", "direccion": "C/ ALCAZABILLA, 15", "horario": "CONSULTAR HORARIO", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-3" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68b0",
+    "geometry": { "type": "Point", "coordinates": [373408.43, 4065043.79] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 4, "punto": "4", "x": "373408.43", "y": "4065043.79", "nombre": "TRAZA DE LA MURALLA EN LA PUERTA DE GRANADA", "ubicacion": "", "direccion": "C/ GRANADA", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-4" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68af",
+    "geometry": { "type": "Point", "coordinates": [373396.14, 4065051.72] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 5, "punto": "5", "x": "373396.14", "y": "4065051.72", "nombre": "LIENZO Y TORRE DE LA MURALLA", "ubicacion": "LOCAL PRIVADO", "direccion": "C/ MEDINA CONDE, 3", "horario": "CONSULTAR HORARIO", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-5" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68ae",
+    "geometry": { "type": "Point", "coordinates": [373283.08, 4065124.59] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 6, "punto": "6", "x": "373283.08", "y": "4065124.59", "nombre": "TRAZA DE LA MURALLA", "ubicacion": "VÍA PÚBLICA", "direccion": "C/ RAMÓN FRANQUELO, 10", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-6" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68ad",
+    "geometry": { "type": "Point", "coordinates": [373246.53, 4065079.29] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 7, "punto": "7", "x": "373246.53", "y": "4065079.29", "nombre": "LIENZO DE LA MURALLA", "ubicacion": "LOCAL PRIVADO", "direccion": "C/ RAMÓN FRANQUELO, 2", "horario": "CONSULTAR HORARIO", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-7" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68ac",
+    "geometry": { "type": "Point", "coordinates": [373264.5, 4065134.33] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 8, "punto": "8", "x": "373264.50", "y": "4065134.33", "nombre": "MURALLA MEDIEVAL", "ubicacion": "VÍA PÚBLICA", "direccion": "C/ MARQUÉS DE GUADIARO, 8", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-8" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68ab",
+    "geometry": { "type": "Point", "coordinates": [373205.95, 4065108.48] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 9, "punto": "9", "x": "373205.95", "y": "4065108.48", "nombre": "MURALLA MEDIEVAL", "ubicacion": "MUSEO MIMMA", "direccion": "C/ BEATAS, 15", "horario": "LUNES 10:00-16:00, MARTES-DOMINGO: 10:0019:00", "telefono": "952210440", "web": "https://www.musicaenaccion.com/", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-9" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68aa",
+    "geometry": { "type": "Point", "coordinates": [373220.04, 4065159.51] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 10, "punto": "10", "x": "373220.04", "y": "4065159.51", "nombre": "MURALLA MEDIEVAL", "ubicacion": "VÍA PÚBLICA", "direccion": "C/ CARCER,3", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-10" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a9",
+    "geometry": { "type": "Point", "coordinates": [373143.66, 4065200.27] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 11, "punto": "11", "x": "373143.66", "y": "4065200.27", "nombre": "MURALLA MEDIEVAL", "ubicacion": "VÍA PÚBLICA", "direccion": "PUERTA DE BUENAVENTURA", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-11" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a8",
+    "geometry": { "type": "Point", "coordinates": [373143.46, 4065207.98] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 12, "punto": "12", "x": "373143.46", "y": "4065207.98", "nombre": "MURALLA MEDIEVAL", "ubicacion": "LOCAL PRIVADO", "direccion": "PUERTA DE BUENAVENTURA, 3", "horario": "CONSULTAR HORARIO", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-12" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a7",
+    "geometry": { "type": "Point", "coordinates": [373125.02, 4065193.81] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 13, "punto": "13", "x": "373125.02", "y": "4065193.81", "nombre": "MURALLA MEDIEVAL", "ubicacion": "CENTRO DE ESTUDIOS HISPANO MARROQUÍ", "direccion": "C/ MURO DE SAN JULIÁN, 33", "horario": "CONSULTAR HORARIO", "telefono": "951926159", "web": "https://centroehm.malaga.eu/", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-13" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a6",
+    "geometry": { "type": "Point", "coordinates": [372917.15, 4065150.21] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 14, "punto": "14", "x": "372917.15", "y": "4065150.21", "nombre": "MURALLA MEDIEVAL", "ubicacion": "VÍA PÚBLICA", "direccion": "C/ CARRETERÍA, 62-64", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-14" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a5",
+    "geometry": { "type": "Point", "coordinates": [372818.12, 4065021.2] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 15, "punto": "15", "x": "372818.12", "y": "4065021.20", "nombre": "MURALLA MEDIEVAL", "ubicacion": "VÍA PÚBLICA", "direccion": "C/ ARCO DE LA CABEZA, 1-7", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-15" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a4",
+    "geometry": { "type": "Point", "coordinates": [372759.97, 4064968.84] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 16, "punto": "16", "x": "372759.97", "y": "4064968.84", "nombre": "MURALLA MEDIEVAL", "ubicacion": "LOCAL PRIVADO", "direccion": "C/ CARRETERÍA, 6-10", "horario": "CONSULTAR HORARIO", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-16" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a3",
+    "geometry": { "type": "Point", "coordinates": [372762.71, 4064911.01] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 17, "punto": "17", "x": "372762.71", "y": "4064911.01", "nombre": "PUERTA NUEVA", "ubicacion": "VÍA PÚBLICA", "direccion": "C/ PUERTA NUEVA", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-17" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a2",
+    "geometry": { "type": "Point", "coordinates": [372739.19, 4064779.07] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 18, "punto": "18", "x": "372739.19", "y": "4064779.07", "nombre": "MURALLA MEDIEVAL", "ubicacion": "LOCAL PRIVADO", "direccion": "PASILLO DE SANTA ISABEL, 5-9", "horario": "CONSULTAR HORARIO", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-18" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a1",
+    "geometry": { "type": "Point", "coordinates": [372744.41, 4064737.89] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 19, "punto": "19", "x": "372744.41", "y": "4064737.89", "nombre": "MURALLA MEDIEVAL", "ubicacion": "LOCAL PRIVADO", "direccion": "PASILLO DE SANTA ISABEL, 11", "horario": "CONSULTAR HORARIO", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-19" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-68a0",
+    "geometry": { "type": "Point", "coordinates": [372848.04, 4064556.34] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 20, "punto": "20", "x": "372848.04", "y": "4064556.34", "nombre": "MURALLA MEDIEVAL / PUERTA DE ATARAZANAS", "ubicacion": "MERCADO DE ATARAZANAS", "direccion": "C/ ATARAZANAS, 10", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-20" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-689f",
+    "geometry": { "type": "Point", "coordinates": [373136.63, 4064569.37] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 21, "punto": "21", "x": "373136.63", "y": "4064569.37", "nombre": "MURALLA MEDIEVAL", "ubicacion": "PARKING PLAZA DE LA MARINA", "direccion": "PLAZA DE LA MARINA", "horario": "ACCESO LIBRE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-21" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-689e",
+    "geometry": { "type": "Point", "coordinates": [373416.76, 4064714.29] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 22, "punto": "22", "x": "373416.76", "y": "4064714.29", "nombre": "MURALLA MEDIEVAL / TUMBA DEL GUERRERO", "ubicacion": "MUSEO ARQUEOLÓGICO", "direccion": "PLAZA DE LA ADUANA", "horario": "MARTES-SÁBADO: 9:00-21:00, DOMINGO: 9:00-15:00", "telefono": "951039269", "web": "http://www.museosdeandalucia.es/web/museodemalaga", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-22" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-689d",
+    "geometry": { "type": "Point", "coordinates": [373540.93, 4064723.07] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 23, "punto": "23", "x": "373540.93", "y": "4064723.07", "nombre": "MURALLA MEDIEVAL / MÁLAGA ROMANA", "ubicacion": "RECTORADO UNIVERSIDAD DE MÁLAGA", "direccion": "AVENIDA DE CERVANTES, 2", "horario": "LUNES-VIERNES: 8:00-21:00, SABADO: 9:00-14:00", "telefono": "952137006", "web": "https://www.uma.es/sicau/info/119469/sicau-rectorado/", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-23" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-689c",
+    "geometry": { "type": "Point", "coordinates": [373540.93, 4064723.07] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 24, "punto": "24", "x": "373540.93", "y": "4064723.07", "nombre": "MÁLAGA ROMANA", "ubicacion": "RECTORADO UNIVERSIDAD DE MÁLAGA", "direccion": "AVENIDA DE CERVANTES, 2", "horario": "LUNES-VIERNES: 8:00-21:00, SABADO: 9:00-14:00", "telefono": "952137006", "web": "https://www.uma.es/sicau/info/119469/sicau-rectorado/", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-24" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-689b",
+    "geometry": { "type": "Point", "coordinates": [373436.41, 4064875.6] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 25, "punto": "25", "x": "373436.41", "y": "4064875.60", "nombre": "MÁLAGA ROMANA", "ubicacion": "TEATRO ROMANO", "direccion": "C/ ALCAZABILLA", "horario": "MARTES-SÁBADO: 10:00-18:00, DOMINGO: 10:00-16:00", "telefono": "951501115", "web": "https://www.juntadeandalucia.es/cultura/enclaves/enclave-arqueologico-teatro-romano-de-malaga", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-25" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-689a",
+    "geometry": { "type": "Point", "coordinates": [373450.99, 4064928.88] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 26, "punto": "26", "x": "373450.99", "y": "4064928.88", "nombre": "MÁLAGA ROMANA", "ubicacion": "TEATRO ROMANO", "direccion": "C/ ALCAZABILLA", "horario": "MARTES-SÁBADO: 10:00-18:00, DOMINGO: 10:00-16:00", "telefono": "951501115", "web": "https://www.juntadeandalucia.es/cultura/enclaves/enclave-arqueologico-teatro-romano-de-malaga", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-26" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-6899",
+    "geometry": { "type": "Point", "coordinates": [373324.6, 4064937.7] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 27, "punto": "27", "x": "373324.60", "y": "4064937.70", "nombre": "MALACA ROMANA", "ubicacion": "MUSEO PICASSO MÁLAGA", "direccion": "C/ SAN AGUSTIN, 8", "horario": "CONSULTAR HORARIO", "telefono": "952127600", "web": "https://www.museopicassomalaga.org/?utm_source=google_busqueda&utm_medium=cpc&utm_campaign=2021_Brassai&utm_content=general", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-27" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-6898",
+    "geometry": { "type": "Point", "coordinates": [373287.88, 4064828.09] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 28, "punto": "28", "x": "373287.88", "y": "4064828.09", "nombre": "MÁLAGA ROMANA", "ubicacion": "SÓTANO EDIFICIO", "direccion": "C/ CISTER, 3", "horario": "NO VISITABLE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-28" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-6897",
+    "geometry": { "type": "Point", "coordinates": [372921.34, 4064907.32] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 29, "punto": "29", "x": "372921.34", "y": "4064907.32", "nombre": "MÁLAGA ROMANA", "ubicacion": "MUSEO CARMEN THYSSEN", "direccion": "C/ COMPAÑÍA, 10", "horario": "NO VISITABLE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-29" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-6896",
+    "geometry": { "type": "Point", "coordinates": [372739.19, 4064779.07] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 30, "punto": "30", "x": "372739.19", "y": "4064779.07", "nombre": "MÁLAGA ROMANA", "ubicacion": "LOCAL PRIVADO", "direccion": "PASILLO DE SANTA ISABEL, 5-9", "horario": "CONSULTAR HORARIO", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-30" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-6895",
+    "geometry": { "type": "Point", "coordinates": [373540.93, 4064723.07] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 31, "punto": "31", "x": "373540.93", "y": "4064723.07", "nombre": "MÁLAGA FENICIA", "ubicacion": "RECTORADO UNIVERSIDAD DE MÁLAGA", "direccion": "AVENIDA DE CERVANTES, 2", "horario": "LUNES-VIERNES: 8:00-21:00, SABADO: 9:00-14:00", "telefono": "952137006", "web": "https://www.uma.es/sicau/info/119469/sicau-rectorado/", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-31" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-6894",
+    "geometry": { "type": "Point", "coordinates": [373416.76, 4064714.29] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 32, "punto": "32", "x": "373416.76", "y": "4064714.29", "nombre": "MÁLAGA FENICIA", "ubicacion": "MUSEO ARQUEOLÓGICO", "direccion": "PLAZA DE LA ADUANA", "horario": "MARTES-SÁBADO: 9:00-21:00, DOMINGO: 9:00-15:00", "telefono": "951039269", "web": "http://www.museosdeandalucia.es/web/museodemalaga", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-32" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-6893",
+    "geometry": { "type": "Point", "coordinates": [373324.6, 4064937.7] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 33, "punto": "33", "x": "373324.60", "y": "4064937.70", "nombre": "MÁLAGA FENICIA", "ubicacion": "MUSEO PICASSO MÁLAGA", "direccion": "C/ SAN AGUSTIN, 8", "horario": "CONSULTAR HORARIO", "telefono": "952127600", "web": "https://www.museopicassomalaga.org/?utm_source=google_busqueda&utm_medium=cpc&utm_campaign=2021_Brassai&utm_content=general", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-33" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-6892",
+    "geometry": { "type": "Point", "coordinates": [373287.88, 4064828.09] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 34, "punto": "34", "x": "373287.88", "y": "4064828.09", "nombre": "MÁLAGA FENICIA", "ubicacion": "SÓTANO EDIFICIO", "direccion": "C/ CISTER, 3", "horario": "NO VISITABLE", "telefono": "", "web": "", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-34" }
+  },
+  {
+    "type": "Feature",
+    "id": "da_rutasArqueologicas.fid-678917ee_180ff2b48ea_-6891",
+    "geometry": { "type": "Point", "coordinates": [373475.48, 4065050.12] },
+    "geometry_name": "geometry",
+    "properties": { "ogc_fid": 35, "punto": "35", "x": "373475.48", "y": "4065050.12", "nombre": "MÁLAGA FENICIA", "ubicacion": "PARKING ALCAZABA", "direccion": "PLAZA JESÚS EL RICO, 1", "horario": "NO VISITABLE", "telefono": "952060104", "web": "https://www.smassa.eu/palcazaba.html", "mas_informacion": "https://rutasarqueologicas.malaga.eu/punto-n-35" }
+  }
+]

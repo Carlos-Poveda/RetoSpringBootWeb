@@ -1,0 +1,170 @@
+/* =========================================
+   Reset básico y Tipografía
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 1rem;
+    min-height: 100vh;
+    position: relative; /* Necesario para posicionar la capa de fondo */
+}
+
+/* Capa de imagen con filtros */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Tu imagen aquí */
+    background-image: url('https://static.costadelsolmalaga.org/malaga/subidas/imagenes/5/2/arc_383925_g.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* FILTROS: Aquí sucede la magia */
+    filter: blur(5px) brightness(30%); /* 5px de desenfoque y 30% de brillo (oscuro) */
+
+    z-index: -1; /* Se coloca detrás de todo el contenido */
+    transform: scale(1.1); /* Evita que se vean bordes blancos por el blur */
+}
+
+/* =========================================
+   Contenedor Principal y Encabezado
+   ========================================= */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   Estilos de la Tabla (Actualizado)
+   ========================================= */
+.tabla-rutas {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    /* Fondo oscuro pero transparente (0.7 es el nivel de opacidad) */
+    background-color: rgba(30, 30, 30, 0.7);
+
+    /* El truco del cristal: difumina lo que hay DETRÁS de la tabla */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    /* Sombra más suave y profunda para dar sensación de elevación */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+
+    /* Un borde sutil que ayuda a definir los límites del cristal */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+}
+
+/* Cabecera y celdas del cuerpo */
+.tabla-rutas th,
+.tabla-rutas td {
+    padding: 0.75rem; /* Reducimos un poco el padding para ganar espacio */
+    text-align: left;
+    word-wrap: break-word; /* Permite que el texto salte a la siguiente línea */
+    overflow-wrap: break-word;
+
+}
+
+/* Reducimos un poco el tamaño de fuente general de la tabla para que quepa mejor */
+.tabla-rutas td {
+    border-bottom: 1px solid #333333;
+    font-size: 0.85rem;
+}
+
+/* Controlar específicamente los enlaces largos para que se rompan si no caben */
+.tabla-rutas a {
+    color: #8ab4f8;
+    text-decoration: none;
+    transition: color 0.2s, text-decoration 0.2s;
+    word-break: break-all; /* Rompe URLs largas en cualquier punto */
+    display: inline-block;
+}
+
+/* =========================================
+   Enlaces
+   ========================================= */
+
+.tabla-rutas a:hover {
+    color: #d2e3fc;
+    text-decoration: underline;
+}
+
+/* Estilo para las filas del cuerpo */
+.tabla-rutas tbody tr {
+    transition: background-color 0.3s ease; /* Animación suave */
+    cursor: default;
+}
+
+/* Efecto al pasar el ratón por encima de una fila */
+.tabla-rutas tbody tr:hover {
+    /* Un color ligeramente más claro y vibrante */
+    background-color: rgba(255, 255, 255, 0.1);
+
+    /* Opcional: una sombra interna para dar profundidad */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Mejoramos el contraste de la cabecera para que no se pierda */
+.tabla-rutas thead tr {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-link {
+    color: #8ab4f8 !important; /* Azul claro estilo Google */
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-link:hover {
+    background-color: rgba(138, 180, 248, 0.15); /* Fondo azul muy tenue al pasar el ratón */
+    color: #aecbfa !important;
+    text-decoration: none !important;
+}
+
+.icon {
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.text-disabled {
+    color: #666666; /* Gris oscuro */
+    font-style: italic;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 8px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Listado de Rutas</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<main class="container">
+    <h1>RUTAS ARQUEOLÓGICAS ANDALUCÍA</h1>
+
+    <table class="tabla-rutas" aria-label="Listado de rutas">
+        <thead>
+        <tr>
+            <th>NOMBRE</th>
+            <th>UBICACIÓN</th>
+            <th>DIRECCIÓN</th>
+            <th>WEB</th>
+            <th>MÁS INFORMACIÓN</th>
+        </tr>
+        </thead>
+        <tbody th:each="ruta : ${rutas}">
+        <tr>
+            <td th:text="${ruta.properties.nombre}">nombre</td>
+            <td th:text="${ruta.properties.ubicacion}">ubicacion</td>
+            <td th:text="${ruta.properties.direccion}">direccion</td>
+            <td>
+                <a th:if="${ruta.properties.web != null and !ruta.properties.web.empty}"
+                   th:href="${ruta.properties.web}"
+                   target="_blank"
+                   class="btn-link">
+                    <i class="icon">🌐</i> Visitar Web
+                </a>
+
+                <span th:unless="${ruta.properties.web != null and !ruta.properties.web.empty}"
+                      class="text-disabled">
+        Web no disponible
+    </span>
+            </td>
+
+            <td>
+                <a th:if="${ruta.properties.masInformacion != null and !ruta.properties.masInformacion.empty}"
+                   th:href="${ruta.properties.masInformacion}"
+                   target="_blank"
+                   class="btn-link">
+                    <i class="icon">🔍</i> Ver Detalles
+                </a>
+
+                <span th:unless="${ruta.properties.masInformacion != null and !ruta.properties.masInformacion.empty}"
+                      class="text-disabled">
+        Sin info adicional
+    </span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>
