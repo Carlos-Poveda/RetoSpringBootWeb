@@ -73,17 +73,6 @@ public class RutaController {
         }
         rutaRepository.delete(ruta);
     }
-    // ACTUALIZAR RUTA POR ID
-//    @PutMapping("/actualizar_ruta_id/{id}")
-//    public Ruta update(@PathVariable String id, @RequestBody Ruta ruta) {
-//        Ruta rutaExistente = rutaRepository.findById(id).orElse(null);
-//        if (rutaExistente != null) {
-//            rutaExistente.setProperties(ruta.getProperties());
-//            return rutaRepository.save(rutaExistente);
-//        } else {
-//            throw new RutaNotFoundException("No hay ninguna ruta con el id: "+id);
-//        }
-//    }
     // Existe por id
     @GetMapping("/comprobar_id/{id}")
     public ResponseEntity<Void> checkExists(@PathVariable String id) {
@@ -102,5 +91,22 @@ public class RutaController {
             } else {
             throw new RutaNotFoundException("No hay ninguna ruta con el nombre: "+nombre);
         }
+    }
+    // Mostrar formulario
+    @GetMapping("/rutas/nueva")
+    public String formularioNuevaRuta(Model model) {
+        return "nueva_ruta";
+    }
+    // Guardar nueva ruta
+    @PostMapping("/rutas/guardar")
+    public String guardarRuta(@ModelAttribute Ruta nuevaRuta) {
+        rutaRepository.save(nuevaRuta);
+        return "redirect:/rutas";
+    }
+    // Eliminar ruta
+    @PostMapping("/rutas/eliminar/{id}")
+    public String eliminarRuta(@PathVariable String id) {
+        rutaRepository.deleteById(id);
+        return "redirect:/rutas";
     }
 }

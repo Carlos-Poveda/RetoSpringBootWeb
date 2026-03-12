@@ -23,13 +23,9 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable()) // Mantener deshabilitado para desarrollo
                 .authorizeHttpRequests(auth -> auth
-                        // PERMITIR registro y login a todo el mundo (GET y POST)
+                        .requestMatchers("/rutas/nueva", "/rutas/guardar", "/rutas/eliminar/**").hasRole("ADMIN")
                         .requestMatchers("/login", "/registro", "/css/**", "/js/**").permitAll()
-
-                        // PERMITIR ver las rutas a todo el mundo
-                        .requestMatchers(HttpMethod.GET, "/rutas/**", "/ruta_id/**").permitAll()
-
-                        // EL RESTO (Añadir rutas, editar, etc.) requiere autenticación
+                        .requestMatchers(HttpMethod.GET, "/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form

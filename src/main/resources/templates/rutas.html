@@ -28,6 +28,12 @@
 <main class="container">
     <h1>RUTAS ARQUEOLÓGICAS DE ANDALUCÍA</h1>
 
+    <div th:if="${#authorization.expression('hasRole(''ADMIN'')')}" style="margin-bottom: 2rem;">
+        <a href="/rutas/nueva" class="btn-llegar" style="background: rgba(76, 175, 80, 0.2); border-color: #4caf50; color: #4caf50; text-decoration: none;">
+            Añadir Nueva Ruta Arqueológica
+        </a>
+    </div>
+
     <table class="tabla-rutas" aria-label="Listado de rutas">
         <thead>
         <tr>
@@ -45,8 +51,12 @@
             onclick="navegarADetalle(this)"
             style="cursor: pointer;">
 
-            <td th:text="${ruta.properties?.nombre}">Nombre</td>
-
+            <td>
+                <span th:if="${ruta.properties?.direccion != null and !ruta.properties.direccion.empty}"
+          th:text="${ruta.properties.direccion}">Dirección</span>
+                <span th:unless="${ruta.properties?.direccion != null and !ruta.properties.direccion.empty}"
+                      class="text-disabled">No disponible</span>
+            </td>
             <td>
                     <span th:if="${ruta.properties?.ubicacion != null and !ruta.properties.ubicacion.empty}"
                           th:text="${ruta.properties.ubicacion}">Ubicación</span>

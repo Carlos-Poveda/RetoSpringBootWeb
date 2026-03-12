@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Ruta - Administración</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <style>
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .full-width { grid-column: span 2; }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            color: white;
+            margin-top: 5px;
+        }
+        label { color: #8ab4f8; font-size: 0.9rem; font-weight: bold; }
+        .section-title {
+            border-bottom: 1px solid rgba(138, 180, 248, 0.3);
+            padding-bottom: 5px;
+            margin: 1.5rem 0 1rem 0;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="detalle-container info-card" style="max-width: 700px;">
+    <a href="/rutas" class="back-btn">← Cancelar y volver</a>
+    <h2 style="margin-bottom: 1rem;">🏛️ Registrar nueva ruta</h2>
+
+    <form th:action="@{/rutas/guardar}" method="post">
+
+        <div class="section-title">Datos Principales</div>
+        <div class="form-group">
+            <label>Nombre del Sitio Arqueológico:</label>
+            <input type="text" name="properties.nombre" placeholder="Ej: Teatro Romano de Cádiz" required>
+        </div>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Ubicación:</label>
+                <input type="text" name="properties.ubicacion" placeholder="Ej: Cádiz">
+            </div>
+            <div class="form-group">
+                <label>Teléfono de contacto:</label>
+                <input type="text" name="properties.telefono" placeholder="Ej: 956 000 000">
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 15px;">
+            <label>Dirección física:</label>
+            <input type="text" name="properties.direccion" placeholder="Ej: C/ Mesón, s/n">
+        </div>
+
+        <div class="section-title">Información de Visita</div>
+        <div class="form-group">
+            <label>Horario de apertura:</label>
+            <textarea name="properties.horario" rows="3" placeholder="Ej: Mar-Sáb: 09:00 a 18:00. Dom: 10:00 a 14:00."></textarea>
+        </div>
+
+        <div class="form-group" style="margin-top: 10px;">
+            <label>Enlace Web Oficial (URL):</label>
+            <input type="url" name="properties.web" placeholder="https://www.museosdeandalucia.es/...">
+        </div>
+
+        <div class="section-title">Geolocalización (UTM)</div>
+        <p style="font-size: 0.8rem; color: #aaa; margin-bottom: 10px;">Necesario para posicionar el marcador en el mapa.</p>
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Coordenada X (Easting):</label>
+                <input type="number" step="any" name="geometry.coordinates[0]" required>
+            </div>
+            <div class="form-group">
+                <label>Coordenada Y (Northing):</label>
+                <input type="number" step="any" name="geometry.coordinates[1]" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-auth" style="margin-top: 2rem; width: 100%; background: #4caf50; color: white;">
+            💾 Guardar Yacimiento en la Base de Datos
+        </button>
+    </form>
+</div>
+</body>
+</html>

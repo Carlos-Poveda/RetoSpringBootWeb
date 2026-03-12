@@ -18,7 +18,7 @@
     <div class="info-card">
       <h2>Información General</h2>
       <p><strong>Ubicación:</strong> <span th:text="${ruta.properties.ubicacion ?: 'No disponible'}"></span></p>
-      <p><strong>Dirección:</strong> <span th:text="${ruta.properties.direccion}"></span></p>
+      <p><strong>Dirección:</strong> <span th:text="${ruta.properties.direccion ?: 'No disponible'}"></span></p>
       <p><strong>Horario:</strong> <span th:text="${ruta.properties.horario ?: 'No disponible'}"></span></p>
       <p><strong>Teléfono:</strong> <span th:text="${ruta.properties.telefono ?: 'No disponible'}"></span></p>
       <div class="info-seccion">
@@ -42,7 +42,15 @@
           📍 Cómo llegar (Google Maps)
         </a>
       </div>
-
+      <div th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="info-card" style="margin-top: 1rem; border: 1px solid rgba(255, 107, 107, 0.3);">
+        <h3 style="color: #ff6b6b; margin-bottom: 1rem;">Zona de Administración</h3>
+        <form th:action="@{/rutas/eliminar/{id}(id=${ruta.id})}" method="post"
+              onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta ruta de forma permanente?');">
+          <button type="submit" class="btn-llegar" style="background: rgba(255, 82, 82, 0.2); border-color: #ff5252; color: #ff5252; width: 100%;">
+            Eliminar Ruta Permanente
+          </button>
+        </form>
+      </div>
     </div>
 
     <div id="map"></div>
