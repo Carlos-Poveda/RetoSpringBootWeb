@@ -308,3 +308,79 @@ h1 {
     margin-top: 10px;
     display: block;
 }
+
+/* =========================================
+   BARRA DE NAVEGACIÓN (HEADER)
+   ========================================= */
+.nav-header {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 2rem;
+}
+
+.nav-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #8ab4f8;
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: #e0e0e0;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-nav:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.btn-primary {
+    background: rgba(138, 180, 248, 0.2);
+    border-color: rgba(138, 180, 248, 0.4);
+    color: #8ab4f8;
+    margin-left: 10px;
+}
+
+.btn-primary:hover {
+    background: #8ab4f8;
+    color: #121212;
+}
+
+.btn-logout {
+    background: transparent;
+    border: 1px solid rgba(255, 107, 107, 0.4);
+    color: #ff6b6b;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+}
+
+.welcome-text {
+    margin-right: 15px;
+    font-size: 0.9rem;
+    color: #aaa;
+}

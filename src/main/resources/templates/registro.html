@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - Rutas Arqueológicas</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+  <style>
+    .auth-container {
+      max-width: 400px;
+      margin: 5rem auto;
+      padding: 2rem;
+    }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; color: #8ab4f8; }
+    .form-group input {
+      width: 100%;
+      padding: 0.8rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: white;
+      outline: none;
+    }
+    .form-group input:focus { border-color: #8ab4f8; }
+    .btn-auth {
+      width: 100%;
+      padding: 1rem;
+      background: #4285F4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn-auth:hover { background: #357ae8; }
+    .error-msg { color: #ff6b6b; margin-bottom: 1rem; font-size: 0.9rem; }
+    .link-swap { margin-top: 1rem; text-align: center; font-size: 0.85rem; }
+    .link-swap a { color: #8ab4f8; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="auth-container info-card">
+  <h2>Crear Cuenta</h2>
+  <p style="margin-bottom: 1.5rem; color: #aaa;">Únete para explorar la historia de Andalucía</p>
+
+  <div th:if="${error}" class="error-msg" th:text="${error}"></div>
+
+  <form th:action="@{/registro}" th:object="${usuario}" method="post">
+    <div class="form-group">
+      <label>Correo Electrónico</label>
+      <input type="email" th:field="*{email}" placeholder="ejemplo@correo.com" required>
+    </div>
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="password" th:field="*{password}" placeholder="********" required>
+    </div>
+    <button type="submit" class="btn-auth">Registrarse</button>
+  </form>
+
+  <div class="link-swap">
+    ¿Ya tienes cuenta? <a href="/login">Inicia sesión aquí</a>
+  </div>
+</div>
+</body>
+</html>

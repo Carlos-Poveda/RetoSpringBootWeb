@@ -6,6 +6,25 @@
     <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
+<nav class="nav-header">
+    <div class="nav-container">
+        <div class="logo">🏛️ ArqueoAndalucía</div>
+
+        <div class="nav-auth">
+            <div th:if="${#authorization.expression('!isAuthenticated()')}">
+                <a href="/login" class="btn-nav">Iniciar Sesión</a>
+                <a href="/registro" class="btn-nav btn-primary">Registrarse</a>
+            </div>
+
+            <div th:if="${#authorization.expression('isAuthenticated()')}" class="user-info">
+                <span class="welcome-text">Hola, <strong th:text="${#authentication.name}">Usuario</strong></span>
+                <form th:action="@{/logout}" method="post" style="display: inline;">
+                    <button type="submit" class="btn-nav btn-logout">Cerrar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
 <main class="container">
     <h1>RUTAS ARQUEOLÓGICAS DE ANDALUCÍA</h1>
 
