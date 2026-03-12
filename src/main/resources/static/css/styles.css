@@ -254,3 +254,57 @@ h1 {
         grid-template-columns: 1fr; /* En móviles, pasa a 1 columna */
     }
 }
+
+/* =========================================
+   ESTILOS DE LOS BOTONES DE ACCIÓN
+   ========================================= */
+
+/* Estilo común para ambos botones */
+.btn-web, .btn-llegar {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-right: 10px; /* Separación si están juntos */
+    text-align: center;
+}
+
+/* Botón Web (Gris azulado oscuro) */
+.btn-web {
+    background-color: rgba(44, 62, 80, 0.8);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-web:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón Cómo llegar (Azul Google Glass) */
+.btn-llegar {
+    background-color: rgba(66, 133, 244, 0.3); /* Azul con transparencia */
+    color: white;
+    border: 1px solid rgba(66, 133, 244, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-llegar:hover {
+    background-color: rgba(66, 133, 244, 0.5);
+    border-color: #4285F4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(66, 133, 244, 0.3);
+}
+
+/* Estilo para el texto cuando no hay info */
+.text-muted {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 10px;
+    display: block;
+}
