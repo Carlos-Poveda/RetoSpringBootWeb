@@ -15,42 +15,32 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
-
     @Autowired
     private PasswordEncoder passwordEncoder;
-
-    // 1. Mostrar la página de Login
+    // Página de login
     @GetMapping("/login")
     public String mostrarLogin() {
-        return "login"; // Devolverá la plantilla login.html
+        return "login";
     }
-
-    // 2. Mostrar la página de Registro
+    // Página de registro
     @GetMapping("/registro")
     public String mostrarRegistro(Model model) {
         model.addAttribute("usuario", new User());
-        return "registro"; // Devolverá la plantilla registro.html
+        return "registro";
     }
-
-    // 3. Procesar el formulario de Registro
+    // Procesar registro
     @PostMapping("/registro")
     public String registrarUsuario(@ModelAttribute User usuario, Model model) {
-        System.out.println("Intentando registrar a: " + usuario.getEmail()); // Log de prueba
         // Comprobar si el email ya existe en la base de datos
         if (userRepository.findByEmail(usuario.getEmail()).isPresent()) {
             model.addAttribute("error", "El email ya está registrado");
             return "registro";
         }
-
-        // Configuración de seguridad crítica antes de guardar
-        usuario.setAdmin(false); // NUNCA fiarse de lo que viene del formulario, forzamos a false
+        // Configuración de seguridad antes de guardar
+        usuario.setAdmin(false);
         usuario.setPassword(passwordEncoder.encode(usuario.getPassword())); // Encriptar la contraseña
 
-        // Guardar en MongoDB
-//        userRepository.save(usuario);
-        User guardado = userRepository.save(usuario);
-        System.out.println("Usuario guardado con ID: " + guardado.getId()); // Si esto sale, está en la nube
-        // Redirigir al login con un mensaje de éxito
+        userRepository.save(usuario);
         return "redirect:/login?registrado=true";
     }
 }

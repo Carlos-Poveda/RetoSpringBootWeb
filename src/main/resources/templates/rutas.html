@@ -51,12 +51,8 @@
             onclick="navegarADetalle(this)"
             style="cursor: pointer;">
 
-            <td>
-                <span th:if="${ruta.properties?.direccion != null and !ruta.properties.direccion.empty}"
-          th:text="${ruta.properties.direccion}">Dirección</span>
-                <span th:unless="${ruta.properties?.direccion != null and !ruta.properties.direccion.empty}"
-                      class="text-disabled">No disponible</span>
-            </td>
+            <td th:text="${ruta.properties?.nombre}">Nombre</td>
+
             <td>
                     <span th:if="${ruta.properties?.ubicacion != null and !ruta.properties.ubicacion.empty}"
                           th:text="${ruta.properties.ubicacion}">Ubicación</span>
@@ -64,7 +60,12 @@
                       class="text-disabled">No disponible</span>
             </td>
 
-            <td th:text="${ruta.properties?.direccion}">Dirección</td>
+            <td>
+                <span th:if="${ruta.properties?.direccion != null and !ruta.properties.direccion.empty}"
+          th:text="${ruta.properties.direccion}">Dirección</span>
+                <span th:unless="${ruta.properties?.direccion != null and !ruta.properties.direccion.empty}"
+                      class="text-disabled">No disponible</span>
+            </td>
 
             <td>
                 <a th:if="${ruta.properties?.web != null and !ruta.properties.web.empty}"

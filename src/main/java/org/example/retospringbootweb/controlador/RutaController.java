@@ -20,7 +20,7 @@ public class RutaController {
         this.rutaRepository = rutaRepository;
     }
 
-    // Devolver la página HTML con todas las rutas
+    // Listado principal
     @GetMapping("/rutas")
     public String all_rutas(Model model) {
         List<Ruta> rutas = rutaRepository.findAll();
@@ -92,18 +92,18 @@ public class RutaController {
             throw new RutaNotFoundException("No hay ninguna ruta con el nombre: "+nombre);
         }
     }
-    // Mostrar formulario
+    // Mostrar formulario nueva ruta
     @GetMapping("/rutas/nueva")
     public String formularioNuevaRuta(Model model) {
         return "nueva_ruta";
     }
-    // Guardar nueva ruta
+    // Guardar nueva ruta (botón)
     @PostMapping("/rutas/guardar")
     public String guardarRuta(@ModelAttribute Ruta nuevaRuta) {
         rutaRepository.save(nuevaRuta);
         return "redirect:/rutas";
     }
-    // Eliminar ruta
+    // Eliminar ruta (botón)
     @PostMapping("/rutas/eliminar/{id}")
     public String eliminarRuta(@PathVariable String id) {
         rutaRepository.deleteById(id);
